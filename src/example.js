@@ -142,6 +142,9 @@ let text = `
 
 ![](https://imgs.xiedaimala.com/QX2cB2w92WCtYJQrhKsvItshnz5YvlEJ/WX20230104-170804%402x.png)<!-- .element: style="height:200px;margin-top:20%;" -->
 
+## 参考
+本项目基于 [revealjs](https://revealjs.com/) 开发
+
 `  
 
 export default text

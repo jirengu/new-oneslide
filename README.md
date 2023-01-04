@@ -1,6 +1,11 @@
 # oneslide
 一个markdown在线制作精美PPT在线工具
 
+[效果预览](https://jirengu.github.io/new-oneslide/dist)
+
+## 使用方法
+鼠标放在屏幕左上角，展示配置按钮，点开即可使用
+
 ## 特点
 
 1. 完全使用Markdown语法，制作PPT极致便捷
@@ -9,6 +14,7 @@
 4. 支持远程拉取Markdown线上文件
 5. 支持本地存储
 6. 开箱即用，无需注册，无后端，无隐私泄漏
+7. 支持移动端、下载PDF、旁白模式等
 
 ## 说明
 
