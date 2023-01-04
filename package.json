@@ -1,0 +1,18 @@
+{
+  "name": "vite-oneslide",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0"
+  },
+  "dependencies": {
+    "leancloud-storage": "^4.14.0",
+    "reveal.js": "^4.4.0"
+  }
+}
