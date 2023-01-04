@@ -71,9 +71,6 @@ hr {
   margin: 30px 0;
 }
 
-hr~* {
-  font-size: 0.56em;
-}
 
 .input-url {
   min-width: 300px;
