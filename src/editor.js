@@ -7,19 +7,21 @@ import Highlight from 'reveal.js/plugin/highlight/highlight.esm.js'
 import Notes from 'reveal.js/plugin/notes/notes.esm.js'
 import Math from 'reveal.js/plugin/math/math.esm.js'
 import convert from './convert'
-import Text from './example.js'
+import ComplexText from './example-complex.js'
+import SimpleText from './example-simple.js'
 
 const Editor = {
   init() {
   
     this.$editInput = document.querySelector('.editor textarea')
     this.$saveBtn = document.querySelector('.editor .button-save')
-    this.$resetBtn = document.querySelector('.editor .button-reset')
+    this.$resetSimpleBtn = document.querySelector('.editor .button-reset-simple')
+    this.$resetComplexBtn = document.querySelector('.editor .button-reset-complex')
     this.$slideContainer = document.querySelector('.slides')
     this.$fetchBtn = document.querySelector('.button-fetch')
     this.$input = document.querySelector('.input-url')
     this.$status = document.querySelector('.status')
-    this.markdown = localStorage.markdown || Text
+    this.markdown = localStorage.markdown || ComplexText
 
     this.bind()
     this.start()
@@ -30,8 +32,11 @@ const Editor = {
       localStorage.markdown  = this.$editInput.value
       location.reload()
     }
-    this.$resetBtn.onclick = () => {
-      this.$editInput.value = Text
+    this.$resetSimpleBtn.onclick = () => {
+      this.$editInput.value = SimpleText
+    }
+    this.$resetComplexBtn.onclick = () => {
+      this.$editInput.value = ComplexText
     }
     this.$fetchBtn.onclick = async () => {
       localStorage.url = this.$input.value

@@ -1,4 +1,4 @@
-
+let text = `
 # CSS
 选择器优先级、样式继承
 
@@ -9,7 +9,7 @@
 
 ## 为什么关注优先级 
 
-```html
+\`\`\`html
 <div id="app">
   <div class="header">
     <p class="user">饥人谷</p>
@@ -28,7 +28,7 @@
     color: blue;
   }
 </style>
-```
+\`\`\`
 
 不同方式修改同一元素同属性，谁说了算？
 
@@ -44,7 +44,7 @@
 ### 
 a链接的颜色是什么？为什么
 
-```html
+\`\`\`html
 <style>
   .box  {
     color: red!important;
@@ -53,7 +53,7 @@ a链接的颜色是什么？为什么
 <div class="box">
   <a href="#">饥人谷</a>
 </div>
-```
+\`\`\`
 ![](https://imgs.xiedaimala.com/s54CKVIhDkPDdjCVVEkaw9KAFzrzhBV6/WX20230104-163156%402x.png)   <!-- .element: style="height:200px" --> 
  
 
@@ -75,7 +75,7 @@ a链接的颜色是什么？为什么
 
 *p的颜色是什么？为什么*
 
-```html
+\`\`\`html
 <style>
   .box {
     color: red!important;
@@ -88,7 +88,7 @@ a链接的颜色是什么？为什么
 <div class="box">
   <p  style="color: yellow;">饥人谷</p>
 </div>
-```
+\`\`\`
 
 ![](https://imgs.xiedaimala.com/QX2cB2w92WCtYJQrhKsvItshnz5YvlEJ/WX20230104-170804%402x.png)<!-- .element: style="height:200px;margin-top:20%;" -->
 
@@ -99,3 +99,6 @@ a链接的颜色是什么？为什么
 
 
 
+`  
+
+export default text

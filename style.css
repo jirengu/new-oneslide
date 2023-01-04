@@ -24,6 +24,17 @@ em {
   column-span: all;
 }
 
+::-webkit-scrollbar
+{
+    width: 3px;
+    height: 3px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: #d9dfdf;
+}
 
 
 button {
@@ -61,6 +72,7 @@ li>ul {
 .reveal.left-top section {
   text-align: left;
 }
+
 
 /* .reveal.left-top .slides > section:first-child {
   text-align: center;
