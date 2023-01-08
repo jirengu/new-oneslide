@@ -272,7 +272,7 @@ hr {
 
 
 .reveal .code-wrapper code {
-  white-space: pre-wrap;
+  white-space: pre-wrap!important;
 }
 
 
