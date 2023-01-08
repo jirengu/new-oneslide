@@ -60,6 +60,13 @@ ${arr[i]}
 </section>
 </section>
       `        
+      } else {
+        html += `
+ <section data-markdown>
+<script type="text/template">
+${arr[i]}
+</script>
+      `  
       }
     }
 

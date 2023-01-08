@@ -22,12 +22,12 @@ const Theme = {
 
     this.$transition.onchange = function() {
       localStorage.transition = this.value
-      location.reload()
+      location.href = location.origin + location.pathname + location.hash 
     }
 
     this.$align.onchange = function() {
       localStorage.align = this.value
-      location.reload()
+      location.href = location.origin + location.pathname + location.hash 
     }
   },
 

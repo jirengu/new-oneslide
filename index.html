@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="./iconfont.css">
   </head>
   <body>
+    <div class="loading">
+      <div class="spinner">
+        <div class="ball"></div>
+        <p>加载Markdown资源...</p>
+      </div> 
+    </div>
 		<div class="control">
 			<span class="iconfont icon-setting"></span>
 		</div>
@@ -37,7 +43,8 @@
             <hr>
             <p>把线上可访问的Markdown文件地址对应的内容下载到编辑器 如：https://raw.githubusercontent.com/jirengu/new-oneslide/master/examples/complex.md</p>
             <input class="input-url" type="text" placeholder="markdown文件远程地址">
-            <button class="button-fetch">同步</button>
+            <button class="button-fetch">仅下载到编辑器</button>
+            <button class="button-preview">直接预览</button>
             <p class="status">同步完成</p>
 					</div>
 				</div>
