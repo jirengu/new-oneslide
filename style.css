@@ -271,6 +271,11 @@ hr {
 }
 
 
+.reveal .code-wrapper code {
+  white-space: pre-wrap;
+}
+
+
 body .control,
 body .menu,
 body .reveal {
