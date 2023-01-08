@@ -9,6 +9,7 @@ import Math from 'reveal.js/plugin/math/math.esm.js'
 import convert from './convert'
 import ComplexText from './example-complex.js'
 import SimpleText from './example-simple.js'
+import { debounce } from 'lodash'
 
 const parseQuery = search => {
   let obj = {}
@@ -65,6 +66,9 @@ const Editor = {
     this.$previewBtn.onclick = async () => {
       location.href = location.origin + location.pathname + '?url=' + encodeURIComponent(this.$input.value)
     }
+    this.$editInput.oninput = debounce(() => {
+      localStorage.markdown = this.$editInput.value 
+    }, 1000)
     
   },
 
