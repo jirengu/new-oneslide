@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+		<meta name="description" content="markdown极简PPT制作工具">
+		<meta name="author" content="若愚@饥人谷">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oneslide-饥人谷</title>
+    <link rel="stylesheet" href="./iconfont.css">
+    <script type="module" crossorigin src="./assets/index-3ee14290.js"></script>
+    <link rel="stylesheet" href="./assets/index-bf5e3f3f.css">
+  </head>
+  <body>
+    <div class="loading">
+      <div class="spinner">
+        <div class="ball"></div>
+        <p>加载Markdown资源...</p>
+      </div> 
+    </div>
+		<div class="control">
+			<span class="iconfont icon-setting"></span>
+		</div>
+		<div class="menu">
+			<span class="iconfont icon-close"></span>
+			<div class="detail">
+				<div class="tab active"><span class="iconfont icon-edit"></span>内容编辑</div>
+				<div class="tab"><span class="iconfont icon-theme"></span>主题与特效</div>
+				<div class="tab download"><span class="iconfont icon-download"></span>下载PDF</div>
+				<div class="tab "><span class="iconfont icon-speaker"></span>演讲者模式</div>
+				<div class="content active">
+					<div class="header">编辑</div>
+					<div class="body editor">
+						<div class="settings">
+							<button class="button-step" title="元素默认隐藏，步进展示"> element step</button>
+							<button class="button-animation" title="页面内容展现有过渡动画"> page animate</button>
+							<button class="button-code" title="插入代码">insert code</button>
+							<button class="button-style" title="自定样式">set style</button>
+							<select class="button-color">
+								<option value="none">文字风格</option>
+								<option value="border">边框</option>
+								<option value="yellow">黄色</option>
+								<option value="red">红色</option>
+								<option value="green">绿色</option>
+								<option value="black">黑色</option>
+								<option value="purple">紫色</option>
+								<option value="white">白色</option>
+								<option value="grey">灰色</option>
+							</select>
+							<select class="button-animate">
+								<option value="none">动画</option>
+								<option value="animate__bounce">bounce</option>
+								<option value="animate__flash">flash</option>
+								<option value="animate__backInLeft">backInLeft/Down/Right/Up</option>
+								<option value="animate__bounceInLeft">bounceInLeft/Down/Right/Up</option>
+								<option value="animate__fadeIn">fadeIn</option>
+								<option value="animate__flipInX">flipInX/Y</option>
+								<option value="animate__lightSpeedInLeft">lightSpeedInLeft/Right</option>
+								<option value="animate__rotateIn">rotateIn</option>
+								<option value="animate__zoomIn">zoomIn</option>
+								<option value="animate__slideInLeft">slideInLeft/Down/Right/Up</option>
+								<option value="animate__heartBeat">heartBeat</option>
+								<option value="animate__pulse">pulse</option>
+								<option value="animate__rubberBand">rubberBand</option>
+								<option value="animate__shakeX">shakeX</option>
+								<option value="animate__shakeY">shakeY</option>
+								<option value="animate__headShake">headShake</option>
+								<option value="animate__animate__swing">swing</option>
+								<option value="animate__tada">tada</option>
+								<option value="animate__wobble">wobble</option>
+								<option value="animate__jello">jello</option>
+								
+							</select>
+						</div>
+						<textarea></textarea>
+						<div class="uploader">
+							<input type="file" id="img-uploader" accept="image/*">
+							<label for="img-uploader">点击上传图片(支持.png、.jpg、.gif，最大2M)</label>
+						</div>
+						<div>
+							<button class="button-save">保存并预览</button>
+              <button class="button-reset-simple">恢复默认-无动效</button>
+              <button class="button-reset-complex">恢复默认-有动效</button>
+						</div>
+
+            <hr>
+            <p>把线上可访问的Markdown文件地址对应的内容下载到编辑器 如：https://raw.githubusercontent.com/jirengu/new-oneslide/master/examples/complex.md</p>
+            <input class="input-url" type="text" placeholder="markdown文件远程地址">
+            <button class="button-fetch">仅下载到编辑器</button>
+            <button class="button-preview">直接预览</button>
+            <p class="status">同步完成</p>
+					</div>
+				</div>
+				<div class="content">
+					<div class="header">主题特效</div>
+					<div class="body theme">
+						<h5>主题</h5>
+						<div class="themes">
+							<figure data-theme="beige">
+								<img src="./theme/beige.png" alt="beige">
+								<figcaption>beige</figcaption>
+							</figure>
+							<figure data-theme="black">
+								<img src="./theme/black.png" alt="black">
+								<figcaption>black</figcaption>
+							</figure>
+							<figure data-theme="blood">
+								<img src="./theme/blood.png" alt="blood">
+								<figcaption>blood</figcaption>
+							</figure>
+							<figure data-theme="league">
+								<img src="./theme/league.png" alt="league">
+								<figcaption>league</figcaption>
+							</figure>
+							<figure data-theme="moon">
+								<img src="./theme/moon.png" alt="moon">
+								<figcaption>moon</figcaption>
+							</figure>
+							<figure data-theme="night">
+								<img src="./theme/night.png" alt="night">
+								<figcaption>night</figcaption>
+							</figure>
+							<figure data-theme="serif">
+								<img src="./theme/serif.png" alt="serif">
+								<figcaption>serif</figcaption>
+							</figure>
+							<figure data-theme="simple" >
+								<img src="./theme/simple.png" alt="simple">
+								<figcaption>simple</figcaption>
+							</figure>
+							<figure data-theme="sky">
+								<img src="./theme/sky.png" alt="sky">
+								<figcaption>sky</figcaption>
+							</figure>
+							<figure data-theme="solarized">
+								<img src="./theme/solarized.png" alt="solarized">
+								<figcaption>solarized</figcaption>
+							</figure>
+							<figure data-theme="white">
+								<img src="./theme/white.png" alt="white">
+								<figcaption>white</figcaption>
+							</figure>
+						</div>
+
+						<h5>转场</h5>
+						<select class="transition">
+							<option value="slide">滑动</option>
+							<option value="fade">淡化</option>
+							<option value="convex">凸出</option>
+							<option value="concave">凹陷</option>
+							<option value="zoom">缩放</option>
+							<option value="none">无</option>
+						</select>
+
+						<h5>对齐</h5>
+						<select class="align">
+							<option value="center">居中</option>
+							<option value="left-top">左上</option>
+						</select>
+					</div>					
+				</div>
+				<div class="content">
+					<div class="header">下载</div>
+					<div class="body download">
+						<p>下载PDF</p>
+					</div>
+				</div>
+				<div class="content">
+					<div class="header">演讲者模式</div>
+					<div class="body speaker">
+						<p>按 <strong>S</strong> 键， 开启演讲者模式</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+    <div class="reveal">
+      <div class="slides">
+
+      </div>
+    </div>
+    
+  </body>
+</html>
