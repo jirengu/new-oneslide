@@ -85,6 +85,7 @@ const Editor = {
       } else {
         localStorage.markdown  = this.markdown = this.$editInput.value = res.data
         localStorage.url = queryObj.url
+        localStorage.autoSlide = queryObj.autoSlide
       }        
     } else {
       this.$editInput.value = this.markdown
@@ -92,15 +93,20 @@ const Editor = {
     }
 
     this.$slideContainer.innerHTML = convert(this.markdown)
-    Reveal.initialize({
-          controls: true,
-          progress: true,
-          center: localStorage.center === 'left-top' ? false : true,
-          hash: true,
-          transition: localStorage.transition || 'slide', // none/fade/slide/convex/concave/zoom
-          // More info https://github.com/hakimel/reveal.js#dependencies
-          plugins: [ Markdown, Highlight, Notes, Math.KaTeX ]
-        })
+    const options = {
+      controls: true,
+      progress: true,
+      center: localStorage.center === 'left-top' ? false : true,
+      hash: true,
+      transition: localStorage.transition || 'slide', // none/fade/slide/convex/concave/zoom
+      // More info https://github.com/hakimel/reveal.js#dependencies
+      plugins: [ Markdown, Highlight, Notes, Math.KaTeX ]
+    }
+    if(localStorage.autoSlide !== '') {
+      options.autoSlide = parseInt(localStorage.autoSlide)
+      options.loop = true
+    } 
+    Reveal.initialize(options)
   }
 }
 
