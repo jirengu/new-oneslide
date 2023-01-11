@@ -44,8 +44,11 @@ const Editor = {
   bind() {
     this.$saveBtn.onclick = () => {
       localStorage.markdown  = this.$editInput.value
+      console.log('reload')
+      console.log(location.origin + location.pathname + location.hash )
       location.href = location.origin + location.pathname + location.hash 
-    }
+      location.reload()
+    } 
     this.$resetSimpleBtn.onclick = () => {
       this.$editInput.value = SimpleText
     }

@@ -59,6 +59,7 @@ black { color: black; font-weight: bold;}
 grey { color: grey; font-weight: bold; }
 green { color: green; font-weight: bold;}
 purple { color: purple; font-weight: bold;}
+border { display: inline-block; margin: 10px;border: 1px solid #aaa; padding: 4px 8px;}
 
 
 ul {
@@ -222,6 +223,10 @@ hr {
 
 .menu .editor label {
   cursor: pointer;
+}
+
+.settings {
+  margin-bottom: 10px;
 }
 
 
